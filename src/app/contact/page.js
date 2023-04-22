@@ -1,10 +1,9 @@
 
-
 const Page = () => {
     return (
-        <>
-         <h1>Hello World</h1>
-        </>
+        <div>
+<h1>Contact Page</h1>
+        </div>
     );
 };
 
