@@ -111,7 +111,7 @@
     height: 0;
     margin: 8px;
     box-sizing: border-box;
-    border: 32px solid #e50914;
+    border: 32px solid;
     border-color: #e50914 transparent #e50914 transparent;
     animation: loading 1.2s infinite;
 }

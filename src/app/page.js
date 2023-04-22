@@ -1,9 +1,10 @@
+import HeroSection from "@/app/components/HeroSection";
 
 
 const Page = () => {
     return (
         <>
-         <h1>Hello World</h1>
+         <HeroSection />
         </>
     );
 };
