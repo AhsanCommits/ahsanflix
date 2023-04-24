@@ -1,10 +1,9 @@
+import HeroSection from "@/app/components/HeroSection";
 
-const Page = () => {
+const About = () => {
     return (
-        <h1>
-           About Us Page
-        </h1>
+        <HeroSection title={"OUR STORY"} imageUrl={"/about1.svg"} />
     );
 };
 
-export default Page;
+export default About;
