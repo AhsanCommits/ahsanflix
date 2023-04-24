@@ -19,7 +19,7 @@ const HeroSection = ({title,imageUrl}) => {
                         selection of the latest and greatest movies, and find your new favorite today.
                     </p>
                     <Link href="/movie">
-                        <button>
+                        <button className={mulish.className}>
                             Explore Movies
                         </button>
                     </Link>
