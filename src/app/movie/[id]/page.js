@@ -26,7 +26,7 @@ const Page = async ({params}) => {
                     <Image src={main_data.backgroundImage.url} alt={main_data.title} width={600} height={300}/>
                 </div>
                 <div>
-                    <h2>{main_data.title}</h2>
+                    <h1>{main_data.title}</h1>
                     <p>{main_data.synopsis}</p>
                 </div>
             </div>
