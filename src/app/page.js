@@ -1,10 +1,12 @@
 import HeroSection from "@/app/components/HeroSection";
-
+import FeatureMovies from "@/app/movie/page";
+import favicon from '@/app/Ahsanflixfavicon.ico';
 
 const Page = () => {
     return (
         <>
-         <HeroSection title={`LET'S WATCH MOVIE TOGETHER`} imageUrl={"/home.svg"}/>
+            <HeroSection title={`Unlimited movies, TV shows, and more`} imageUrl={"/home.svg"} />
+            <FeatureMovies />
         </>
     );
 };
