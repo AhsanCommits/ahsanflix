@@ -17,14 +17,45 @@ const ContactForm = () => {
         phone:"",
         message:""
     })
+
+    const [status, setStatus] = useState(null);
     function handleChange(e) {
         const name = e.target.name;
         const value = e.target.value;
 
         setUser((prevUser)=>({...prevUser,[name] : value}))
     }
-    function handleSubmit() {
+    const  handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('/api/contact',{
+                method: 'POST',
+                headers:{"Content_Type": "application/json"},
+                body: JSON.stringify({
+                    username: user.username,
+                    email: user.email,
+                    phone: user.phone,
+                    message: user.message
+                })
+            })
 
+            //     Set the status based on the response from the API route
+            if(response.status === 200){
+                setUser({
+                    username:"",
+                    email:"",
+                    phone:"",
+                    message:""
+                })
+                setStatus('success');
+            }
+            else{
+                setStatus('error')
+            }
+        }
+        catch (e){
+            console.log(e);
+        }
     }
 
 
@@ -60,6 +91,8 @@ const ContactForm = () => {
             </div>
 
             <div>
+                {status === 'success' && <p className={styles.success_msg}>Thank you for your message!</p>}
+                {status === 'error' && <p className={styles.error_msg}>There was an error while submitting your message. Please try again.</p>}
                 <button type="submit" className={mulish.className}>Send Message</button>
             </div>
         </form>
