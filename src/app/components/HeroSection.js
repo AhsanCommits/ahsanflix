@@ -15,7 +15,7 @@ const HeroSection = ({title,imageUrl}) => {
                 <div className={heroStyles.hero_content}>
                     <h1>{title}</h1>
                     <p>
-                        From award-winning dramas to blockbuster action movies, we've got you covered. Browse our
+                        From award-winning dramas to blockbuster action movies, we&lsquo;ve got you covered. Browse our
                         selection of the latest and greatest movies, and find your new favorite today.
                     </p>
                     <Link href="/movie">
